@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-02-28T14:05:00Z",
+  "env": "demo",
+  "failure_mode": "combined",
+  "disable_cache": true,
+  "enable_slow_query": true,
+  "db_pool_limit": 2,
+  "inject_timeout_errors": true,
+  "database_url": "sqlite:///./app.db",
+  "sentry_dsn": "<redacted>"
+}

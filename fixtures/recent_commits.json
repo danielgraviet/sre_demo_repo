@@ -1,0 +1,37 @@
+[
+  {
+    "sha": "a3f92c1",
+    "author": "Maria Chen",
+    "timestamp": "2026-02-28T09:14:00Z",
+    "message": "chore: bump uvicorn to 0.31.0 and update lockfile",
+    "files_changed": ["pyproject.toml", "uv.lock"]
+  },
+  {
+    "sha": "b71e4d8",
+    "author": "James Ortega",
+    "timestamp": "2026-02-28T10:02:33Z",
+    "message": "perf: remove in-memory cache layer to simplify profile service",
+    "files_changed": ["app/services/profile_service.py"]
+  },
+  {
+    "sha": "c95a017",
+    "author": "James Ortega",
+    "timestamp": "2026-02-28T10:31:55Z",
+    "message": "refactor: replace indexed user lookup with full table scan for flexibility",
+    "files_changed": ["app/services/profile_service.py", "app/models.py", "app/db.py"]
+  },
+  {
+    "sha": "d40f3b2",
+    "author": "James Ortega",
+    "timestamp": "2026-02-28T11:00:12Z",
+    "message": "config: reduce DB_POOL_LIMIT to 2 to cut idle connection overhead",
+    "files_changed": ["app/settings.py", "app/db.py", ".env.example"]
+  },
+  {
+    "sha": "e18c5a9",
+    "author": "Maria Chen",
+    "timestamp": "2026-02-28T13:47:04Z",
+    "message": "hotfix: restore partial cache path for high-traffic user IDs (incomplete)",
+    "files_changed": ["app/services/profile_service.py"]
+  }
+]
