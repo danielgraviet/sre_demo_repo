@@ -4,7 +4,7 @@ setup:
 	uv sync --extra dev
 
 run:
-	uv run uvicorn app.main:app --reload
+	uv run uvicorn app.main:app --reload --port 8001
 
 seed:
 	uv run python -m app.seed
@@ -19,5 +19,5 @@ load:
 	@echo "Sending 50 requests to /api/users/profile/1 ..."
 	@for i in $$(seq 1 50); do \
 		curl -s -o /dev/null -w "req $$i: %{http_code} (%{time_total}s)\n" \
-			http://localhost:8000/api/users/profile/1; \
+			http://localhost:8001/api/users/profile/1; \
 	done
