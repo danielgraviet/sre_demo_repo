@@ -4,6 +4,12 @@ A demo incident generator for **Alpha SRE**. Runs a production-like FastAPI serv
 
 ---
 
+## Incident B Flow (Visual)
+
+![Incident B non-technical flow](assets/incident-b-flow.svg)
+
+---
+
 ## Quick Start
 
 ```bash

@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" modified="2026-02-28T00:00:00.000Z" agent="Codex" version="24.7.17" editor="www.diagrams.net">
+  <diagram id="incidentBFlow" name="Incident B (Simple View)">
+    <mxGraphModel dx="1220" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Incident B: How a Small Update Caused a Service Slowdown" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="20" width="820" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n1" value="1) A software update is released" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n2" value="2) The quick shortcut (cache) is turned off" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="210" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n3" value="3) Every customer request now takes the longer database route" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="320" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n4" value="4) That new route is slow, so each request takes more time" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="430" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n5" value="5) Requests pile up and start waiting in line" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="540" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n6" value="6) The database runs out of available connection slots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5b7b1;strokeColor=#a61c00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="650" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n7" value="7) Customers see slow screens, timeouts, and some errors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5b7b1;strokeColor=#a61c00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="760" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n8" value="8) Monitoring (Sentry) shows a spike in slowness and failures" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="870" width="500" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="summary" value="Key takeaway: one small release change created a traffic jam effect across the system." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="980" width="660" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n1" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n2" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n3" target="n4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n4" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n5" target="n6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n6" target="n7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n7" target="n8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n8" target="summary">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
