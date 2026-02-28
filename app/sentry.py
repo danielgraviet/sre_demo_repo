@@ -20,6 +20,5 @@ def init_sentry() -> None:
         environment=settings.env,
     )
 
-    with sentry_sdk.new_scope() as scope:
-        scope.set_tag("service", "mock-sre-service")
-        scope.set_tag("demo_scenario", "incident_b")
+    sentry_sdk.set_tag("service", "mock-sre-service")
+    sentry_sdk.set_tag("demo_scenario", "incident_b")
